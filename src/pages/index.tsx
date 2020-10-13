@@ -4,11 +4,12 @@ import { Container } from './styles';
 
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import MainSection from '../components/MainSection';
 
 const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleToggle() {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   }
 
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
     <Container>
       <Sidebar isOpen={isOpen} toggle={handleToggle} />
       <Header toggle={handleToggle} />
+      <MainSection />
     </Container>
   );
 }
